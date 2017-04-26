@@ -1,4 +1,4 @@
-Version 1.2 - ???
+Version 1.2 - April 25th, 2017
 
 - Added ping feature
 - Changed player initialization
