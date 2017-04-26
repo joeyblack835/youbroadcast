@@ -65,8 +65,8 @@ var channelId = '<?php echo ($error) ? '' : $channel_id; ?>';
 -->
 </script>
 <link media="all" href="<?php echo $base_url; ?>css/default.min.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="<?php echo $base_url; ?>js/XMLHttpRequest.js" defer="defer"></script>
-<script type="text/javascript" src="<?php echo $base_url; ?>js/main.js" defer="defer"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>js/XMLHttpRequest.min.js" defer="defer"></script>
+<script type="text/javascript" src="<?php echo $base_url; ?>js/main.min.js" defer="defer"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
@@ -156,22 +156,6 @@ var channelId = '<?php echo ($error) ? '' : $channel_id; ?>';
 
 	</div>
 	<?php endif; ?>
-
-<div id="logg"></div>
-
-<script>
-	setInterval(function() {
-		document.getElementById('logg').innerHTML = '';
-	}, 600000);
-
-	function logg(newLogg) {
-		var logg = document.getElementById('logg').innerHTML;
-		var d = new Date();
-		var n = Math.floor(d.getTime() / 1000);
-		logg+= n + ': ' + newLogg + '<br>';
-		document.getElementById('logg').innerHTML = logg;
-	}
-</script>
 
 </div>
 <script>

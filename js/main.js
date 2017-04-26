@@ -105,7 +105,7 @@ function playbackShow() {
 			playbackTry(true);
 		}, 30000);
 		_lockPlaybackTry = false;
-		logg('playbackTry is free!');
+//		logg('playbackTry is free!');
 	}
 
 }
@@ -113,13 +113,13 @@ function playbackShow() {
 function playbackTry(ping) {
 	if (!_lockPlaybackTry) {
 		if (!ping || seconds > 5) {
-			logg('playbackTry: ' + ping);
+//			logg('playbackTry: ' + ping);
 			_lockPlaybackTry = true;
 			_isPing = ping;
 			loadXMLDoc(baseUrl + 'get_tracks.php?channel_id=' + channelId + '&amp;' + Math.random(), playbackShow);
 		}
 	} else {
-		logg('playbackTry: ' + ping + ' -- is busy!');
+//		logg('playbackTry: ' + ping + ' -- is busy!');
 	}
 }
 
