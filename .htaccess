@@ -1,0 +1,28 @@
+DirectoryIndex index.php
+
+<FilesMatch "\.(css|jpg|jpeg|png|js)$">
+<ifModule mod_headers.c>
+Header set Cache-Control "max-age=604800, must-revalidate"
+</ifModule>
+</FilesMatch>
+
+<ifModule mod_headers.c>
+Header unset ETag
+</ifModule>
+FileETag None
+
+<FilesMatch ".(js|css|xml|gz)$">
+<ifModule mod_headers.c>
+Header append Vary: Accept-Encoding
+</ifModule>
+</FilesMatch>
+
+<ifModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^css/ - [L]
+RewriteRule ^images/ - [L]
+RewriteRule ^channel/joey/?$ channel.php?%{QUERY_STRING}&channel_id=joey [L]
+RewriteCond %{REQUEST_FILENAME} !-f  
+RewriteRule ^(.+)/?$ channel.php [L]
+</ifModule>

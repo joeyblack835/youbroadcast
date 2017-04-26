@@ -1,0 +1,11 @@
+Version 1.2 - ???
+
+- Added ping feature
+- Changed player initialization
+- Changed loadXMLDoc function
+- Fixed XML request timeout
+- Reorganized .htaccess file
+
+Version 1.1 - October 30th, 2016
+
+- Countdown with setInterval() instead of setTimeout()
