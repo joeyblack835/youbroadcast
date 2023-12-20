@@ -1,5 +1,5 @@
 <?php
-// Test review
+
 include 'include/main2.inc.php';
 
 include BASE_DIR . '/include/session_handler.inc.php';
